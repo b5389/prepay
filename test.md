@@ -62,6 +62,7 @@ PrePay利用区块链不可篡改、可追溯性和支持智能合约的特点�
 <div align=center>
   <img src="img/equation.PNG">
 </div>
+
 ##### (6)预付资金存管方案图
 <img src="img/leverage.jpg" align=center>
 
