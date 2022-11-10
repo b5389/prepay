@@ -51,13 +51,17 @@ PrePay利用区块链不可篡改、可追溯性和支持智能合约的特点�
 
 ##### (5)杠杆拨付方案
 存管银行将预付资金的90%以杠杆的形式在每次服务完成之后结算至商家的结算账户中。信用评级决定了参与系统的预付卡企业的杠杆率，也就是向消费者提供预付卡服务后，每次提供服务后可拿到的资金。评估分数主要由服务完成数量，投诉数量，开店时间以及开店数量构成。当这90%的存管资金结算完成但服务未全部完成，不再结算存管资金（存管资金的90%已结算完成）。
-<img src="img/credit.jpg" align=center>
+<div align=center>
+  <img src="img/credit.jpg">
+</div>
 
 
 
 评估分数主要由服务完成数量x1，投诉数量x2，开店时间x3以及开店数量x4构成。
 采用的公式如下：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/40acbef7c3a648ea988818594fd6fd2e.png#pic_center)
+<div align=center>
+  <img src="img/equation.png">
+</div>
 ##### (6)预付资金存管方案图
 <img src="img/leverage.jpg" align=center>
 
@@ -98,7 +102,9 @@ PrePay利用区块链不可篡改、可追溯性和支持智能合约的特点�
 
 ##### （1）隐私保护技术
 区块链的一大特点是链上数据公开透明，若是将消费者的个人隐私数据明文直接上链存储，会产生严重的数据隐私问题。项目使用FISCO BCOS平台提供的WeDPR模块的VCL公开可验证密文账本对预付卡交易全流程中产生的隐私数据进行加密，生成密文凭证上链进行保存，加密数据的有效性由密文状态下生成的零知识证明进行验证，从而避免了隐私数据的泄露。
-![VCL示例流程图（From: wedpr-lab.readthedocs.io）](https://img-blog.csdnimg.cn/502e3e1965d54686828a43ee03422dc9.png#pic_center)
+<div align=center>
+  <img src="img/WeDPR.png">
+</div>
 <br />
 由于数据全程加密，发行预付卡的商家无法取得预付卡相关的隐私信息，如办卡时间、账户余额与消费记录等，但能够通过零知识证明验证交易的有效性，从而实现了交易公平与隐私保护。
 
