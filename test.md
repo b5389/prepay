@@ -60,7 +60,7 @@ PrePay利用区块链不可篡改、可追溯性和支持智能合约的特点�
 评估分数主要由服务完成数量x1，投诉数量x2，开店时间x3以及开店数量x4构成。
 采用的公式如下：
 <div align=center>
-  <img src="img/equation.png">
+  <img src="img/equation.PNG">
 </div>
 ##### (6)预付资金存管方案图
 <img src="img/leverage.jpg" align=center>
