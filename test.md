@@ -51,15 +51,15 @@ PrePay利用区块链不可篡改、可追溯性和支持智能合约的特点�
 
 ##### (5)杠杆拨付方案
 存管银行将预付资金的90%以杠杆的形式在每次服务完成之后结算至商家的结算账户中。信用评级决定了参与系统的预付卡企业的杠杆率，也就是向消费者提供预付卡服务后，每次提供服务后可拿到的资金。评估分数主要由服务完成数量，投诉数量，开店时间以及开店数量构成。当这90%的存管资金结算完成但服务未全部完成，不再结算存管资金（存管资金的90%已结算完成）。
+<img src="img/credit.jpg" align=center>
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1644fdaf6825474ab0e65b7e719b723c.png#pic_center)
 
 
 评估分数主要由服务完成数量x1，投诉数量x2，开店时间x3以及开店数量x4构成。
 采用的公式如下：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/40acbef7c3a648ea988818594fd6fd2e.png#pic_center)
 ##### (6)预付资金存管方案图
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e6a04a69237a4c25aaaf412c05484d23.png#pic_center)
+<img src="img/leverage.jpg" align=center>
 
 ### 2.预付卡使用
 ##### （1）使用凭证
