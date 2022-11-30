@@ -12,7 +12,7 @@
 
 #### 技术文档：<a href="./Contracts/readme.md">点击这里</a>
 
-#### 部署文档：<a href="./Frontend/readme.md">点击这里</a>
+#### 部署文档：<a href="./Frontend/README.md">点击这里</a>
 
 ## 项目简介
 
