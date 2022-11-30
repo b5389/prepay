@@ -48,6 +48,9 @@ public class CardService {
         TransactionResponse response = prepaidCardService.selectByCardID(inputBO);
         List<Object> list = response.getReturnObject();
         CardVo cardVo = new CardVo();
+        if (list == null || list.get(0) == null) {
+            return null;
+        }
         cardVo.setCardId((String) list.get(0));
         cardVo.setUserName((String) list.get(1));
         cardVo.setShopName((String) list.get(2));
@@ -59,6 +62,7 @@ public class CardService {
         ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(file));
         String text = (String) inputStream.readObject();
         cardVo.setText(text);
+        inputStream.close();
         return cardVo;
     }
 

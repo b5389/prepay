@@ -49,7 +49,7 @@ public class CardController {
 
     @GetMapping("/delete")
     @ResponseBody
-    public boolean deleteOne( String cardId) throws Exception {
+    public boolean deleteOne(String cardId) throws Exception {
         return cardService.deleteById(cardId);
     }
 
