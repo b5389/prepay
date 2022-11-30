@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
+@CrossOrigin
 @Controller
 @RequestMapping("/card")
 public class CardController {
@@ -24,7 +25,6 @@ public class CardController {
                                        @RequestParam("balance") Integer balance,
                                        @RequestParam("text") String text,
                                        HttpServletResponse response) throws Exception {
-        response.addHeader("Access-Control-Allow-Origin", "*");
         String data = cardService.createCard(userId, shopId, balance, text);
         CommonResponse res = new CommonResponse();
         int code = data != null ? 200 : 500;
@@ -37,22 +37,19 @@ public class CardController {
 
     @GetMapping("/list")
     @ResponseBody
-    public List<Object> cardList(HttpServletResponse response) throws Exception {
-        response.addHeader("Access-Control-Allow-Origin", "*");
+    public List<Object> cardList() throws Exception {
         return cardService.cardList();
     }
 
     @GetMapping("/one")
     @ResponseBody
-    public CardVo cardOne(HttpServletResponse response, String cardId) throws Exception {
-        response.addHeader("Access-Control-Allow-Origin", "*");
+    public CardVo cardOne(String cardId) throws Exception {
         return cardService.getCardById(cardId);
     }
 
     @GetMapping("/delete")
     @ResponseBody
-    public boolean deleteOne(HttpServletResponse response, String cardId) throws Exception {
-        response.addHeader("Access-Control-Allow-Origin", "*");
+    public boolean deleteOne( String cardId) throws Exception {
         return cardService.deleteById(cardId);
     }
 
