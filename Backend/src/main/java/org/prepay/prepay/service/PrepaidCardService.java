@@ -13,6 +13,7 @@ import org.fisco.bcos.sdk.transaction.model.dto.CallResponse;
 import org.fisco.bcos.sdk.transaction.model.dto.TransactionResponse;
 import org.prepay.prepay.model.bo.PrepaidCardChangeBalanceInputBO;
 import org.prepay.prepay.model.bo.PrepaidCardCreateCardInputBO;
+import org.prepay.prepay.model.bo.PrepaidCardDeleteCardInputBO;
 import org.prepay.prepay.model.bo.PrepaidCardSelectByCardIDInputBO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -26,7 +27,7 @@ public class PrepaidCardService {
 
   public static final String BINARY = org.prepay.prepay.utils.IOUtil.readResourceAsString("bin/ecc/PrepaidCard.bin");
 
-//  public static final String SM_BINARY = org.prepay.prepay.utils.IOUtil.readResourceAsString("bin/ecc/PrepaidCard.bin");
+  public static final String SM_BINARY = org.prepay.prepay.utils.IOUtil.readResourceAsString("bin/sm/PrepaidCard.bin");
 
   @Value("${system.contract.prepaidCardAddress}")
   private String address;
@@ -39,6 +40,14 @@ public class PrepaidCardService {
   @PostConstruct
   public void init() throws Exception {
     this.txProcessor = TransactionProcessorFactory.createAssembleTransactionProcessor(this.client, this.client.getCryptoSuite().getCryptoKeyPair());
+  }
+
+  public TransactionResponse deleteCard(PrepaidCardDeleteCardInputBO input) throws Exception {
+    return this.txProcessor.sendTransactionAndGetResponse(this.address, ABI, "deleteCard", input.toArgs());
+  }
+
+  public TransactionResponse selectAll() throws Exception {
+    return this.txProcessor.sendTransactionAndGetResponse(this.address, ABI, "selectAll", Arrays.asList());
   }
 
   public TransactionResponse changeBalance(PrepaidCardChangeBalanceInputBO input) throws Exception {

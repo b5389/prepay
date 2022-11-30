@@ -24,7 +24,7 @@ public class ComplaintService {
 
   public static final String BINARY = org.prepay.prepay.utils.IOUtil.readResourceAsString("bin/ecc/Complaint.bin");
 
-//  public static final String SM_BINARY = org.prepay.prepay.utils.IOUtil.readResourceAsString("bin/sm/Complaint.bin");
+  public static final String SM_BINARY = org.prepay.prepay.utils.IOUtil.readResourceAsString("bin/sm/Complaint.bin");
 
   @Value("${system.contract.complaintAddress}")
   private String address;
